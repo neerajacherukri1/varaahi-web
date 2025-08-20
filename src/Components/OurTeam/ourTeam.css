@@ -1,0 +1,109 @@
+.banner{
+    background-image: url('../../assests/WhatsApp\ Image\ 2025-08-19\ at\ 17.55.40_757a1bdd.jpg');
+    height: 390px;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.head{
+
+    color: white;
+    font-size: 40px;
+    font-weight: 700;
+    ;
+}
+.team-lead-img{
+    width: 587px;
+    height: 384px;
+    border-radius: 4px;
+}
+.team-members{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 60px;
+    margin-top: 60px;
+
+}
+.bio-team{
+    display: flex;
+    flex-direction: column;
+    margin-top: -28px;
+}
+.team-lead-name{
+    font-size: 20px;
+    font-weight: 700;
+    
+}
+.team-lead-bio{
+    font-size: 20px;
+    font-weight: 400;
+    display: flex;
+    flex-wrap: wrap;
+    width: 450px;
+}
+.team-member-head{
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 50px;
+}
+.team-member-img{
+    width: 388.5px;
+    height: 356.22px;
+}
+.team-member-name{
+    font-size: 20px;
+    color: #1A1A1A;
+    font-weight: 500;
+
+}
+.team-member-role{
+    font-size: 16px;
+    font-weight: 400;
+    color: #111111B2;
+    margin-top: -8px;
+}
+.team-member-bio{
+    font-size: 13.36px;
+    font-weight: 400;
+    display: flex;
+    color: #00000080;
+    padding-left: 24px;
+    width: 343px;
+    
+   
+}
+.team-member-details{
+    width: 388.5px;
+}
+.team-center{
+    text-align: center;
+}
+.team-member-cards{
+    width: 100%;
+    gap: 26px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.team-member-card{
+    width: 388px;
+    height: 484px;
+    box-shadow: 0px 2px 2px rgb(114, 114, 114) ;
+    border-radius: 8px;
+}
+.fa-icon{
+    color: rgb(255, 254, 254);
+    width: 100px;
+    height: 100px;
+    border-radius: 40px;
+    background-color: #1F4B43;
+    padding:14px 14px 10px 12px;
+    margin-right: 10px;
+}
+.team-member-icons{
+    padding: 28px 0px;
+}
