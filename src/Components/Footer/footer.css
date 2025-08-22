@@ -1,0 +1,151 @@
+.footer {
+  background: #1F4B43;
+  color: white;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  position: relative;
+}
+
+/* Top row with 5 columns */
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;                /* ✅ reduced gap */
+  padding: 40px 60px;       /* ✅ reduced padding */
+  background-color: #194038;
+  flex-wrap: nowrap;
+}
+
+.footer-logo,
+.footer-company,
+.footer-services,
+.footer-contact,
+.footer-apps {
+  flex: 1;
+  min-width: 140px;        /* ✅ smaller for tighter layout */
+}
+
+/* Logo block */
+.footer-logo img {
+  width: 140px;            /* ✅ slightly smaller */
+  margin-bottom: 12px;
+}
+.footer-logo p {
+  margin-bottom: 15px;
+  font-size: 12px;
+  color: #d1d1d1;
+  max-width: 220px;
+}
+
+/* Social icons */
+.footer-socials {
+  display: flex;
+  gap:6px;
+}
+.footer-socials .fa-icon {
+  font-size: 12px;          /* ✅ smaller */
+  color: white;
+  background: #0c3c32;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  padding: 4px;             /* ✅ reduced padding */
+  transition: all 0.3s;
+}
+.footer-socials .fa-icon:hover { background: #1dbf73; }
+
+/* Section headings */
+.footer-company h4,
+.footer-services h4,
+.footer-contact h4,
+.footer-apps h4 {
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Links */
+.footer-company ul,
+.footer-services ul {
+  list-style: none;
+  padding: 0;
+}
+.footer-company li,
+.footer-services li {
+  margin-bottom: 6px;
+}
+.footer-company a,
+.footer-services a {
+  color: #d1d1d1;
+  font-size: 12px;
+  text-decoration: none;
+  transition: color 0.3s;
+  display: block;
+}
+.footer-company a:hover,
+.footer-services a:hover { color: #1dbf73; }
+
+/* Contact */
+.footer-contact p {
+  font-size: 12px;
+  color: #d1d1d1;
+  margin-bottom: 8px;
+}
+
+/* App Store buttons */
+.footer-apps a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  padding: 8px 10px;
+  background: #1e5c4e;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 12px;
+  width: 130px;             /* ✅ reduced */
+  height: 40px;
+}
+.footer-apps a:hover { background: #1dbf73; }
+.app-icon-wrapper { display: flex; align-items: center; gap: 5px; }
+.fa-app-icon { font-size: 16px; }  /* ✅ smaller */
+.divider { width: 1px; height: 20px; background: rgba(255, 255, 255, 0.5); }
+.app-text { display: flex; flex-direction: column; line-height: 1.1; }
+.app-text small { font-size: 9px; color: #d1d1d1; }
+.app-text strong { font-size: 11px; font-weight: bold; }
+
+/* Bottom section */
+.footer-bottom {
+  text-align: center;
+  padding: 12px 0;
+  font-size: 11px;
+  color: #d1d1d1;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  background-color: #1F4B43;
+}
+.footer-bottom strong { color: white; }
+.footer-policy { margin-top: 6px; }
+.footer-policy a {
+  margin: 0 6px;
+  color: #d1d1d1;
+  text-decoration: none;
+  font-size: 11px;
+}
+.footer-policy a:hover { color: #1dbf73; }
+
+/* Back to top */
+.back-to-top {
+  position: absolute;
+  bottom: 80px;
+  right: 40px;
+  background: #f4c542;
+  color: #11473d;
+  font-weight: bold;
+  padding: 10px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s;
+  font-size: 13px;
+}
+.back-to-top:hover { background: #d8aa32; }

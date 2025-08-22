@@ -6,16 +6,19 @@ import Home from './Components/Home/Home';
 import { Login} from './Components/Login/Login';
 import ContactForm from './Components/ContactForm/ContactForm';
 import OurTeam from './Components/OurTeam/OurTeam';
+import NavBar from './Components/NabBar/NavBar';
+import Footer from './Components/Footer/Footer';
 
 function App() {
   return (
    <BrowserRouter>
+                 <NavBar/>
       
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/contact" element={<ContactForm />} />
-                <Route path="/ourteam" element={<OurTeam />} />
+                <Route path="/team" element={<OurTeam />} />
                           
                 {/* <Route
                   path="*"
@@ -28,6 +31,7 @@ function App() {
                   }
                 /> */}
               </Routes>
+              <Footer/>
           
     </BrowserRouter>
   );
