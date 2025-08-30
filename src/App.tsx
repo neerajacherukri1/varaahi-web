@@ -5,18 +5,20 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './Components/Home/Home';
 import { Login} from './Components/Login/Login';
 import ContactForm from './Components/ContactForm/ContactForm';
-import OurTeam from './Components/OurTeam/OurTeam';
+import OurTeam from './Pages/OurTeam/OurTeam';
 import NavBar from './Components/NabBar/NavBar';
 import Footer from './Components/Footer/Footer';
+import AboutUs from './Components/Homepage/AboutSection/AboutUs';
 
 function App() {
   return (
    <BrowserRouter>
-                 <NavBar/>
-      
-              <Routes>
+                  <NavBar />
+  <main className="main-content">
+     <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/login" element={<Login />} />
+                <Route path="/about" element={<AboutUs/>}/>
+                
                 <Route path="/contact" element={<ContactForm />} />
                 <Route path="/team" element={<OurTeam />} />
                           
@@ -32,6 +34,10 @@ function App() {
                 /> */}
               </Routes>
               <Footer/>
+   
+  </main>
+      
+             
           
     </BrowserRouter>
   );

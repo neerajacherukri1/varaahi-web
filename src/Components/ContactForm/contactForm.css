@@ -1,3 +1,51 @@
+.contact-section{
+   margin-top: 0; 
+  padding-top: 0;
+    
+
+}
+.contactus-title {
+  font-size: 28px;
+  font-weight: 700;
+  font-family: 'Playfair Display', serif;
+  margin-bottom:0px;
+  text-align: center;
+  background-color: #e4e5e7;
+  padding: 30px 20px;
+  position: relative;
+    margin-top: -1px;
+}
+
+
+/* underline for OU */
+.ntac-underline {
+  position: relative;
+}
+.ntac-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 1px;
+  background: #000;
+}
+
+/* underline for T with space */
+.t-underline {
+  position: relative;
+  margin-left: 6px;
+}
+.t-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 1px;
+  background: #000;
+}
+
 /* General Styling */
 .contact-container {
   display: flex;
@@ -8,6 +56,7 @@
   max-width: 1200px;
   margin: 0 auto;
  
+
 }
 
 h2 {
@@ -38,7 +87,7 @@ h2 {
   flex-shrink: 0;
   width: 44px;
   height: 44px;
-  background-color: #1a8c7d; /* Teal color from image */
+  background-color: #1a8c7d; 
   color: white;
   border-radius: 50%;
   display: flex;
@@ -81,7 +130,7 @@ h2 {
   background-color: #f8f9fa;
   font-size: 1rem;
   font-family: inherit;
-  box-sizing: border-box; /* Ensures padding doesn't affect width */
+  box-sizing: border-box; 
   color: #333;
 }
 
@@ -91,21 +140,21 @@ h2 {
 }
 
 .contact-form select {
-  color: #888; /* Placeholder color */
+  color: #888; 
 }
 
 .contact-form select:focus,
 .contact-form select option:not(:disabled) {
-  color: #333; /* Text color when an option is selected */
+  color: #333; 
 }
 
 .contact-form textarea {
-  grid-column: 1 / -1; /* Span across both columns */
+  grid-column: 1 / -1; 
   resize: vertical;
 }
 
 .contact-form button {
-  grid-column: 1 / 2; /* Place in the first column */
+  grid-column: 1 / 2;
   padding: 14px 28px;
   background-color: #1a8c7d;
   color: white;

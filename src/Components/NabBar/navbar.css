@@ -1,21 +1,31 @@
 .navbar {
-  display: flex;
+    position: fixed;     
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;       
+  background: #fff;     
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  display: grid;
+    grid-template-columns: auto 1fr auto;
   align-items: center;
-  justify-content: space-around;
-  padding: 12px 40px;
-  background: #fff;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  justify-content:flex-start;
+  padding: 10px 40px;
+    box-sizing: border-box;  
+      gap: 40px; 
 }
 
 .navbar-logo img {
   height: 60px;
+  margin-left:60px;
 }
 
 .navbar-links {
   display: flex;
-  align-items: center;
-  gap: 35px;
+  justify-content: center;
+  gap:35px;
   font-weight: 600;
+    /* flex-wrap: wrap; */
 }
 
 .navbar-links a {
@@ -72,6 +82,11 @@
   display: block;
 }
 
+/* .navbar-login {
+  
+   /* flex-shrink: 0;  reduced spacing from links 
+} */
+
 /* Login button */
 .login-btn {
     width:120px;
@@ -83,6 +98,7 @@
   background: transparent;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
+    
 }
 
 .login-btn:hover {

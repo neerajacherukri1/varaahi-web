@@ -1,0 +1,79 @@
+.clients-section {
+  background-color: #e4e5e7;
+  text-align: center;
+  padding: 60px 20px 40px;
+  margin: 0;
+}
+
+
+/* 
+
+.clients-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom:80px;
+  position: relative;
+  display: inline-block;
+} */
+
+.clients-title {
+  font-size: 28px;
+  font-weight: 700;
+  font-family: 'Playfair Display', serif;
+  margin-bottom:70px;
+  margin-top: 0;
+  text-align: center;
+  position: relative;
+}
+
+/* underline for "Cli" */
+.cli-underline {
+  position: relative;
+  display: inline-block;
+}
+.cli-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 1px;
+  background: #000;
+}
+
+/* underline for "e" */
+.e-underline {
+  position: relative;
+  display: inline-block;
+  margin-left: 4px; /* creates small gap like in screenshot */
+}
+.e-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 1px;
+  background: #000;
+}
+
+/* .clients-title span {
+  border-bottom: 2px solid black;
+  padding-bottom: 4px;
+} */
+
+.clients-logos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:  80px 100px;
+  justify-items: center;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.clients-logos img {
+  max-height: 80px;
+  object-fit: contain;
+}

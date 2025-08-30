@@ -1,8 +1,11 @@
-import React, { useState } from 'react';
-import './login.css';
-import { useNavigate } from 'react-router-dom';
+import React, { useState } from "react";
+import "./login.css";
+import { useNavigate } from "react-router-dom";
 
-// A simple SVG logo. In a real app, you would import a proper image.
+interface LoginProps {
+  onClose: () => void; // ✅ added for modal close
+}
+
 const SvgLogo = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -14,27 +17,22 @@ const SvgLogo = () => (
   </svg>
 );
 
+export const Login: React.FC<LoginProps> = ({ onClose }) => {
+  const [activeTab, setActiveTab] = useState("customer");
+  const navigate = useNavigate();
 
- export const Login: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('customer');
-const navigate = useNavigate();
-  const handleTabChange = (tab: string) => {
-    setActiveTab(tab);
-  };
-const ContactForm = () => {
-navigate('/contact')
-    
-}
-const OurTeam = () => {
-  console.log('function is calling--->')
-navigate('/Ourteam')
-    
-}
+  const handleTabChange = (tab: string) => setActiveTab(tab);
+
+  const ContactForm = () => navigate("/contact");
+  const OurTeam = () => navigate("/ourteam");
+
   const renderForm = () => {
-    if (activeTab === 'customer') {
+    if (activeTab === "customer") {
       return (
         <>
-          <p className="form-subtitle">Securely access your real estate dashboard.</p>
+          <p className="form-subtitle">
+            Securely access your real estate dashboard.
+          </p>
           <div className="form-group">
             <label htmlFor="mobile" className="input-label">
               Mobile Number
@@ -51,7 +49,11 @@ navigate('/Ourteam')
                   stroke="currentColor"
                   className="dropdown-arrow"
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                  />
                 </svg>
               </div>
               <input
@@ -62,13 +64,17 @@ navigate('/Ourteam')
               />
             </div>
           </div>
-          <button className="otp-button" onClick={OurTeam}>Request OTP</button>
+          <button className="otp-button" onClick={OurTeam}>
+            Request OTP
+          </button>
         </>
       );
     } else {
       return (
         <>
-          <p className="form-subtitle">Access your real estate dashboard securely.</p>
+          <p className="form-subtitle">
+            Access your real estate dashboard securely.
+          </p>
           <div className="form-group">
             <label htmlFor="employeeId" className="input-label">
               Employee ID
@@ -100,65 +106,77 @@ navigate('/Ourteam')
               Forgot password?
             </a>
           </div>
-          <button className="otp-button" onClick={ContactForm}>Sign In</button>
+          <button className="otp-button" onClick={ContactForm}>
+            Sign In
+          </button>
         </>
       );
     }
   };
 
   return (
-    <div className="login-container">
-      <div className="login-card">
-        <div className="card-left">
-          <div className="welcome-text">Welcome!</div>
-          <div className="logo-section">
-            <div className="logo-box">
-              <SvgLogo />
-              <div className="logo-text-container">
-                <div className="logo-main-text">SRI VARAAHI</div>
-                <div className="logo-sub-text">REALTY SERVICES LLP</div>
-                <div className="logo-tagline">Realty with Responsibility</div>
+    <div className="login-overlay">
+      {/* ✅ background overlay */}
+      <div className="login-container">
+        <div className="login-card">
+          <div className="card-left">
+            <div className="welcome-text">Welcome!</div>
+            <div className="logo-section">
+              <div className="logo-box">
+                <SvgLogo />
+                <div className="logo-text-container">
+                  <div className="logo-main-text">SRI VARAAHI</div>
+                  <div className="logo-sub-text">REALTY SERVICES LLP</div>
+                  <div className="logo-tagline">Realty with Responsibility</div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div className="card-right">
-          <div className="close-button">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={2}
-              stroke="currentColor"
-              className="close-icon"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </div>
-          <div className="login-form-section">
-            <h2 className="form-title">
-              {/* {activeTab === 'employee' ? 'Sign In' : 'Log In'} */}
-              Log In 
-            </h2>
-            <div className="tab-container">
-              <button
-                className={`tab-button ${activeTab === 'employee' ? 'active' : ''}`}
-                onClick={() => handleTabChange('employee')}
+
+          <div className="card-right">
+            {/* ✅ close button works */}
+            <div className="close-button" onClick={onClose}>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={2}
+                stroke="currentColor"
+                className="close-icon"
               >
-                Employee
-              </button>
-              <button
-                className={`tab-button ${activeTab === 'customer' ? 'active' : ''}`}
-                onClick={() => handleTabChange('customer')}
-              >
-                Customer
-              </button>
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
             </div>
-            {renderForm()}
+
+            <div className="login-form-section">
+              <h2 className="form-title">Log In</h2>
+              <div className="tab-container">
+                <button
+                  className={`tab-button ${
+                    activeTab === "employee" ? "active" : ""
+                  }`}
+                  onClick={() => handleTabChange("employee")}
+                >
+                  Employee
+                </button>
+                <button
+                  className={`tab-button ${
+                    activeTab === "customer" ? "active" : ""
+                  }`}
+                  onClick={() => handleTabChange("customer")}
+                >
+                  Customer
+                </button>
+              </div>
+              {renderForm()}
+            </div>
           </div>
         </div>
       </div>
     </div>
   );
 };
-

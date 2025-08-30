@@ -32,8 +32,11 @@ const ClockIcon = () => (
 
 const ContactForm: React.FC = () => {
   return (
-    <div>
-      <h1 className='' style={{textAlign:'center'}}>Contact Us</h1>
+    <section className="contact-section">
+      {/* Title */}
+      <h2 className="contactus-title">
+      Co<span className="ntac-underline">ntac</span><span className="t-underline">t</span><span className="us-underline">&nbsp;Us</span>
+      </h2>
     <div className="contact-container">
       <div className="contact-info">
         <h2>Get in touch</h2>
@@ -94,7 +97,7 @@ const ContactForm: React.FC = () => {
         </form>
       </div>
     </div>
-    </div>
+    </section>
   );
 };
 
